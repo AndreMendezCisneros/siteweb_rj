@@ -32,7 +32,7 @@ export default async function ComoTrabajamosPage({ params }: Props) {
       {/* Detalle de etapas: línea de tiempo alternada */}
       <Section band>
         <SectionHeading title={t.detailTitle} />
-        <ol className="relative mt-12 space-y-0">
+        <ol className="relative mt-10 space-y-0">
           {/* Línea central en desktop, lateral en móvil */}
           <span
             className="absolute left-5 top-0 h-full w-0.5 bg-gradient-to-b from-primary/10 via-primary/25 to-accent/40 lg:left-1/2 lg:-translate-x-1/2"
@@ -83,7 +83,7 @@ export default async function ComoTrabajamosPage({ params }: Props) {
       <Section>
         <Reveal>
           <div className="grid overflow-hidden rounded-[var(--radius-lg)] bg-ink lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="px-6 py-12 sm:px-10 lg:px-14 lg:py-16">
+            <div className="px-6 py-10 sm:px-10 lg:px-14 lg:py-14">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">
                 {t.heroEyebrow}
               </p>

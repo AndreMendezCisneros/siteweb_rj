@@ -14,7 +14,7 @@ export function CtaBand({
   description?: string;
 }) {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-10 sm:py-12 lg:py-14">
       <Container>
         <div className="overflow-hidden rounded-[var(--radius-lg)] bg-primary px-6 py-12 sm:px-10 lg:px-14">
           <div className="max-w-2xl">

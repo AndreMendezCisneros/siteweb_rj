@@ -15,7 +15,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`py-16 sm:py-20 lg:py-24 ${band ? "section-band" : ""} ${className}`}
+      className={`py-10 sm:py-12 lg:py-14 ${band ? "section-band" : ""} ${className}`}
     >
       <Container>{children}</Container>
     </section>

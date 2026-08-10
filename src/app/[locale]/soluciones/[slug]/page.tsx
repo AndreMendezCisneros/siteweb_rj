@@ -90,7 +90,7 @@ export default async function SolutionPage({ params }: Props) {
             )}
 
             {solution.kind === "product" && solution.image ? (
-              <figure className="mt-10 max-w-xl">
+              <figure className="mt-8 max-w-xl">
                 <div className="overflow-hidden rounded-[var(--radius-lg)] shadow-md">
                   <Image
                     src={solution.image}
@@ -107,7 +107,7 @@ export default async function SolutionPage({ params }: Props) {
               </figure>
             ) : null}
 
-            <div className="mt-10 max-w-xl">
+            <div className="mt-8 max-w-xl">
               <ProductMock
                 variant={mockVariant(solution.slug, solution.kind)}
                 caption={t.illustrationCaption}

@@ -19,10 +19,10 @@ export function VideoSection({
   poster?: string;
 }) {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="py-10 sm:py-12 lg:py-14">
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} description={description} />
-        <div className="relative mt-10 overflow-hidden rounded-[var(--radius-lg)] shadow-md">
+        <div className="relative mt-8 overflow-hidden rounded-[var(--radius-lg)] shadow-md">
           {VIDEO_URL ? (
             <video
               controls

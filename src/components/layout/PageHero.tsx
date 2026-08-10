@@ -39,7 +39,7 @@ export function PageHero({
         aria-hidden
       />
 
-      <Container className="relative py-14 sm:py-16 lg:py-20">
+      <Container className="relative py-10 sm:py-12 lg:py-14">
         {eyebrow ? (
           <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-primary-hover">
             <span className="h-1.5 w-6 rounded-full bg-accent" aria-hidden />

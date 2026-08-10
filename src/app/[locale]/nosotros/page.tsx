@@ -73,7 +73,7 @@ export default async function NosotrosPage({ params }: Props) {
       {/* Historia: línea de tiempo vertical */}
       <Section band>
         <SectionHeading eyebrow={t.historyEyebrow} title={history.title} />
-        <ol className="relative mt-12 max-w-3xl space-y-10 border-l-2 border-primary/15 pl-8 sm:pl-10">
+        <ol className="relative mt-10 max-w-3xl space-y-8 border-l-2 border-primary/15 pl-8 sm:pl-10">
           {history.paragraphs.map((paragraph, index) => (
             <li key={paragraph.slice(0, 32)} className="relative">
               <span
@@ -97,7 +97,7 @@ export default async function NosotrosPage({ params }: Props) {
       {/* Filosofía: panel oscuro con atmósfera de marca */}
       <Section>
         <Reveal>
-          <div className="hero-atmosphere relative overflow-hidden rounded-[var(--radius-lg)] px-6 py-14 sm:px-12 lg:px-16">
+          <div className="hero-atmosphere relative overflow-hidden rounded-[var(--radius-lg)] px-6 py-12 sm:px-12 lg:px-16">
             <div
               className="absolute inset-0 opacity-[0.12]"
               style={{
@@ -136,7 +136,7 @@ export default async function NosotrosPage({ params }: Props) {
           title={t.valuesTitle}
           description={t.valuesDescription}
         />
-        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value, index) => (
             <li key={value.title}>
               <Reveal

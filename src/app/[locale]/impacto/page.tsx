@@ -28,7 +28,7 @@ export default async function ImpactoPage({ params }: Props) {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <SectionHeading title={t.rootsTitle} description={dict.site.origin} />
-            <ul className="mt-10 space-y-5">
+            <ul className="mt-8 space-y-5">
               {t.items.map((item) => (
                 <li
                   key={item.title}
@@ -62,7 +62,7 @@ export default async function ImpactoPage({ params }: Props) {
 
       <Section band>
         <SectionHeading title={t.mapTitle} description={t.mapDescription} />
-        <div className="mt-10">
+        <div className="mt-8">
           <PeruMap
             points={dict.map.points}
             labels={{

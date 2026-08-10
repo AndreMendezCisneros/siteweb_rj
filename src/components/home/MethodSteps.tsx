@@ -8,7 +8,7 @@ export function MethodSteps({
   compact?: boolean;
 }) {
   return (
-    <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {steps.map((item, index) => (
         <li
           key={item.step}

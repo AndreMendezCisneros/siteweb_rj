@@ -31,7 +31,7 @@ export default async function SolucionesPage({ params }: Props) {
           title={t.productsTitle}
           description={t.productsDescription}
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
           {dict.products.map((product, index) => (
             <Reveal key={product.slug} delay={index * 90} className="h-full">
               <SolutionCard
@@ -54,7 +54,7 @@ export default async function SolucionesPage({ params }: Props) {
           title={t.servicesTitle}
           description={t.servicesDescription}
         />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {dict.services.map((service, index) => (
             <Reveal key={service.slug} delay={(index % 3) * 90} className="h-full">
               <SolutionCard

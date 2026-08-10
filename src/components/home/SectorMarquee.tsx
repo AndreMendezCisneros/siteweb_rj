@@ -8,8 +8,8 @@ export function SectorMarquee({
   const list = [...items, ...items];
 
   return (
-    <section className="border-y border-border bg-surface/70 py-8" aria-label={title}>
-      <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+    <section className="border-y border-border bg-surface/70 py-6" aria-label={title}>
+      <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted">
         {title}
       </p>
       <div className="marquee-mask relative overflow-hidden">

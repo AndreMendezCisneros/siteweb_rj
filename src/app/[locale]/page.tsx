@@ -94,7 +94,7 @@ export default async function HomePage({
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
           {dict.products.map((product, index) => (
             <Reveal key={product.slug} delay={index * 90} className="h-full">
               <SolutionCard
@@ -129,7 +129,7 @@ export default async function HomePage({
       {/* 5. Carrusel de exploración */}
       <Section id="explora">
         <SectionHeading eyebrow={home.insights.eyebrow} title={home.insights.title} />
-        <div className="mt-10">
+        <div className="mt-8">
           <InsightsCarousel
             slides={carouselSlides}
             prevLabel={dict.ui.prev}
@@ -155,7 +155,7 @@ export default async function HomePage({
             description={home.differential.description}
           />
         </Reveal>
-        <ul className="mt-10 grid gap-5 md:grid-cols-3">
+        <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {dict.positioning.map((point, index) => (
             <li key={point.title}>
               <Reveal delay={index * 100} className="border-l-2 border-accent pl-5">
