@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const locales = ["es", "en"] as const;
+const locales = ["es", "en", "quy"] as const;
 
 export function LanguageToggle({ current }: { current: string }) {
   const pathname = usePathname() || "/";
-  const rest = pathname.replace(/^\/(es|en)(?=\/|$)/, "") || "";
+  const rest = pathname.replace(/^\/(es|en|quy)(?=\/|$)/, "") || "";
 
   return (
     <div
