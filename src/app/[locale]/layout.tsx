@@ -44,6 +44,15 @@ export async function generateMetadata({
       template: `%s | ${site.name}`,
     },
     description: site.definition,
+    icons: {
+      icon: [
+        { url: "/favicon.ico?v=3", sizes: "any" },
+        { url: "/favicon-32.png?v=3", type: "image/png", sizes: "32x32" },
+        { url: "/favicon.png?v=3", type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180" }],
+      shortcut: "/favicon.ico?v=3",
+    },
     openGraph: {
       type: "website",
       locale: site.ogLocale,
@@ -51,6 +60,14 @@ export async function generateMetadata({
       siteName: site.name,
       title: `${site.name} — ${site.tagline}`,
       description: site.definition,
+      images: [
+        {
+          url: "/images/logo_ryjec_figura_sf.png",
+          width: 512,
+          height: 512,
+          alt: site.name,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
