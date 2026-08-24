@@ -28,9 +28,9 @@ export function ProductScreenshot({
 
   if (isPhone) {
     return (
-      <figure className={`relative mx-auto w-full max-w-[12.5rem] sm:max-w-[14rem] ${className}`}>
+      <figure className={`relative mx-auto flex w-[12.5rem] shrink-0 flex-col sm:w-[13.5rem] ${className}`}>
         <div className="overflow-hidden rounded-[1.75rem] border border-border bg-ink p-[0.4rem] shadow-md ring-1 ring-black/5">
-          <div className="relative overflow-hidden rounded-[1.35rem] bg-surface">
+          <div className="relative aspect-[9/19] overflow-hidden rounded-[1.35rem] bg-surface">
             <span
               className="absolute left-1/2 top-1.5 z-10 h-1 w-10 -translate-x-1/2 rounded-full bg-ink/15"
               aria-hidden
@@ -38,19 +38,24 @@ export function ProductScreenshot({
             <Image
               src={src}
               alt={alt}
-              width={390}
-              height={844}
+              fill
               priority={priority}
-              className="h-auto w-full object-cover object-top"
-              sizes="(max-width: 640px) 200px, 224px"
+              className="object-cover object-top"
+              sizes="216px"
             />
           </div>
         </div>
         {caption ? (
-          <figcaption className={`mt-3 text-center text-xs ${isHero ? "text-white/55" : "text-muted"}`}>
+          <figcaption
+            className={`mt-3 min-h-[2.5rem] text-center text-xs leading-snug ${
+              isHero ? "text-white/55" : "text-muted"
+            }`}
+          >
             {caption}
           </figcaption>
-        ) : null}
+        ) : (
+          <span className="mt-3 min-h-[2.5rem]" aria-hidden />
+        )}
       </figure>
     );
   }

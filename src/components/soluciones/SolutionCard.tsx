@@ -30,19 +30,29 @@ export function SolutionCard({
       {image ? (
         <div
           className={`relative overflow-hidden border-b border-border ${
-            phonePreview ? "flex h-52 items-end justify-center bg-ink px-6 pt-6" : "h-44 bg-ink"
+            phonePreview ? "flex h-52 items-end justify-center px-6 pt-6" : "h-44 bg-ink"
           }`}
         >
           {phonePreview ? (
-            <div className="relative h-full w-[7.5rem] overflow-hidden rounded-t-[1.1rem] border border-b-0 border-white/15 bg-surface shadow-lg">
+            <>
               <Image
-                src={image}
+                src="/images/foto_pl.jpg"
                 alt=""
                 fill
-                className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
-                sizes="120px"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </div>
+              <div className="absolute inset-0 bg-ink/45" aria-hidden />
+              <div className="relative h-full w-[7.5rem] overflow-hidden rounded-t-[1.1rem] border border-b-0 border-white/25 bg-surface shadow-lg">
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                  sizes="120px"
+                />
+              </div>
+            </>
           ) : (
             <Image
               src={image}

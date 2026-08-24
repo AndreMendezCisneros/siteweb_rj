@@ -4,8 +4,7 @@ import { MethodSteps } from "@/components/home/MethodSteps";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { TechImageFrame } from "@/components/visuals/TechImageFrame";
-import { siteImages } from "@/lib/productScreenshots";
+import { PhotoPanel } from "@/components/visuals/PhotoPanel";
 import { getDict } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -80,33 +79,24 @@ export default async function ComoTrabajamosPage({ params }: Props) {
         </ol>
       </Section>
 
-      {/* Transparencia: panel oscuro con imagen */}
+      {/* Transparencia: foto de fondo a pantalla del bloque */}
       <Section>
         <Reveal>
-          <div className="grid overflow-hidden rounded-[var(--radius-lg)] bg-ink lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="px-6 py-10 sm:px-10 lg:px-14 lg:py-14">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">
-                {t.heroEyebrow}
-              </p>
-              <h2 className="mt-4 font-[family-name:var(--font-syne)] text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                {t.transparencyTitle}
-              </h2>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
-                {t.transparencyDescription}
-              </p>
-              <div className="mt-8 flex items-center gap-3">
-                <span className="h-px w-10 bg-accent" aria-hidden />
-                <p className="text-sm leading-relaxed text-white/65">{dict.site.promise}</p>
-              </div>
+          <PhotoPanel>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/70">
+              {t.heroEyebrow}
+            </p>
+            <h2 className="mt-4 max-w-2xl font-[family-name:var(--font-syne)] text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              {t.transparencyTitle}
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
+              {t.transparencyDescription}
+            </p>
+            <div className="mt-8 flex items-center gap-3">
+              <span className="h-px w-10 bg-accent" aria-hidden />
+              <p className="max-w-xl text-sm leading-relaxed text-white/75">{dict.site.promise}</p>
             </div>
-            <div className="relative min-h-[16rem] p-4 sm:p-6">
-              <TechImageFrame
-                src={siteImages.teamMember}
-                alt={dict.home.showcase.caption}
-                className="h-full"
-              />
-            </div>
-          </div>
+          </PhotoPanel>
         </Reveal>
       </Section>
 

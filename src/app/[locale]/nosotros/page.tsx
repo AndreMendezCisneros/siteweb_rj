@@ -4,6 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ValueIcon } from "@/components/visuals/Icons";
+import { PhotoPanel } from "@/components/visuals/PhotoPanel";
 import { TechImageFrame } from "@/components/visuals/TechImageFrame";
 import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
@@ -77,38 +78,27 @@ export default async function NosotrosPage({ params }: Props) {
         </ol>
       </Section>
 
-      {/* Filosofía: panel oscuro con atmósfera de marca */}
+      {/* Filosofía: foto de fondo */}
       <Section>
         <Reveal>
-          <div className="hero-atmosphere relative overflow-hidden rounded-[var(--radius-lg)] px-6 py-12 sm:px-12 lg:px-16">
-            <div
-              className="absolute inset-0 opacity-[0.12]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgb(255 255 255 / 0.1) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.1) 1px, transparent 1px)",
-                backgroundSize: "42px 42px",
-              }}
-              aria-hidden
-            />
-            <div className="relative max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
-                {t.philosophyEyebrow}
-              </p>
-              <p className="mt-5 font-[family-name:var(--font-syne)] text-3xl font-semibold leading-snug text-white sm:text-4xl">
-                “{site.philosophy}”
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-white/80">{site.promise}</p>
-              <div className="mt-8 flex items-center gap-3">
-                <span className="h-px w-10 bg-accent" aria-hidden />
-                <p className="font-[family-name:var(--font-syne)] text-base font-semibold text-white/90">
-                  {site.differential}
-                </p>
-              </div>
-              <p className="mt-6 max-w-2xl text-sm leading-relaxed text-white/65">
-                {site.origin}
+          <PhotoPanel contentClassName="relative max-w-3xl px-6 py-12 sm:px-12 lg:px-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+              {t.philosophyEyebrow}
+            </p>
+            <p className="mt-5 font-[family-name:var(--font-syne)] text-3xl font-semibold leading-snug text-white sm:text-4xl">
+              “{site.philosophy}”
+            </p>
+            <p className="mt-6 text-lg leading-relaxed text-white/85">{site.promise}</p>
+            <div className="mt-8 flex items-center gap-3">
+              <span className="h-px w-10 bg-accent" aria-hidden />
+              <p className="font-[family-name:var(--font-syne)] text-base font-semibold text-white/90">
+                {site.differential}
               </p>
             </div>
-          </div>
+            <p className="mt-6 max-w-2xl text-sm leading-relaxed text-white/75">
+              {site.origin}
+            </p>
+          </PhotoPanel>
         </Reveal>
       </Section>
 
