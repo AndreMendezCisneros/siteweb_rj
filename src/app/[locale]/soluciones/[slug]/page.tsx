@@ -117,11 +117,14 @@ export default async function SolutionPage({ params }: Props) {
             ) : null}
 
             {screenshots ? (
-              <div className="mt-8 max-w-xl">
+              <div className="mt-8">
                 <ProductScreenshot
                   src={screenshots.secondary}
                   alt={secondaryCaption(dict, solution.slug, screenshots.secondary)}
                   caption={secondaryCaption(dict, solution.slug, screenshots.secondary)}
+                  device={
+                    screenshots.secondary.includes("app_asistencia") ? "phone" : "browser"
+                  }
                 />
               </div>
             ) : (
@@ -143,8 +146,17 @@ export default async function SolutionPage({ params }: Props) {
               </p>
             )}
             <p className="mt-4 text-sm leading-relaxed text-muted">{dict.site.differential}</p>
-            <div className="mt-6">
-              <Button href={`/${locale}/contacto`} className="w-full">
+            <div className="mt-6 flex flex-col gap-3">
+              {solution.kind === "product" && solution.siteUrl ? (
+                <Button href={solution.siteUrl} className="w-full">
+                  {dict.ui.visitSite}
+                </Button>
+              ) : null}
+              <Button
+                href={`/${locale}/contacto`}
+                variant={solution.kind === "product" && solution.siteUrl ? "ghost" : "primary"}
+                className="w-full"
+              >
                 {dict.cta.talk}
               </Button>
             </div>
@@ -158,7 +170,38 @@ export default async function SolutionPage({ params }: Props) {
         </div>
       </Section>
 
-      <Section band>
+      {solution.slug === "web" && dict.webClients.length > 0 ? (
+        <Section band>
+          <SectionHeading
+            title={dict.ui.clientWork}
+            description={dict.webClients[0]?.summary}
+          />
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2">
+            {dict.webClients.map((client) => (
+              <li key={client.url}>
+                <a
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  <ProductScreenshot
+                    src={client.image}
+                    alt={client.name}
+                    caption={`${client.name} · ${client.url.replace(/^https?:\/\//, "")}`}
+                    url={client.url.replace(/^https?:\/\//, "")}
+                  />
+                  <span className="mt-3 inline-flex text-sm font-semibold text-accent transition group-hover:translate-x-0.5">
+                    {dict.ui.openClientSite} →
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
+
+      <Section band={!(solution.slug === "web" && dict.webClients.length > 0)}>
         <SectionHeading title={dict.ui.otherSolutions} />
         <ul className="mt-8 grid gap-4 sm:grid-cols-3">
           {related.map((item) => (

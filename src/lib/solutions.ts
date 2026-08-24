@@ -10,6 +10,7 @@ export type SolutionEntry =
       audience: string;
       benefits: readonly string[];
       image?: string;
+      siteUrl?: string;
     }
   | {
       kind: "service";
@@ -29,6 +30,7 @@ export function getAllSolutions(dict: Dict): SolutionEntry[] {
     audience: product.audience,
     benefits: product.benefits,
     image: product.image,
+    siteUrl: product.siteUrl,
   }));
 
   const serviceEntries: SolutionEntry[] = dict.services.map((service) => ({

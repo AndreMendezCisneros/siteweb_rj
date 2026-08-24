@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { CtaBand } from "@/components/home/CtaBand";
 import { MethodSteps } from "@/components/home/MethodSteps";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { TechImageFrame } from "@/components/visuals/TechImageFrame";
 import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
@@ -99,17 +99,11 @@ export default async function ComoTrabajamosPage({ params }: Props) {
                 <p className="text-sm leading-relaxed text-white/65">{dict.site.promise}</p>
               </div>
             </div>
-            <div className="relative min-h-[16rem]">
-              <Image
+            <div className="relative min-h-[16rem] p-4 sm:p-6">
+              <TechImageFrame
                 src={siteImages.teamMember}
                 alt={dict.home.showcase.caption}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-transparent"
-                aria-hidden
+                className="h-full"
               />
             </div>
           </div>

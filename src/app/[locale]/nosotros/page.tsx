@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { CtaBand } from "@/components/home/CtaBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ValueIcon } from "@/components/visuals/Icons";
+import { TechImageFrame } from "@/components/visuals/TechImageFrame";
 import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
@@ -44,29 +44,11 @@ export default async function NosotrosPage({ params }: Props) {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <figure className="relative">
-              <div
-                className="absolute -left-4 -top-4 h-20 w-20 rounded-2xl border-2 border-accent/40"
-                aria-hidden
-              />
-              <div
-                className="absolute -bottom-5 -right-5 h-28 w-28 rounded-2xl bg-primary/10"
-                aria-hidden
-              />
-              <div className="relative overflow-hidden rounded-[var(--radius-lg)] shadow-md">
-                <Image
-                  src={siteImages.team}
-                  alt={dict.home.showcase.caption}
-                  width={1024}
-                  height={768}
-                  className="h-auto w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <figcaption className="mt-3 text-xs text-muted">
-                {dict.home.showcase.caption}
-              </figcaption>
-            </figure>
+            <TechImageFrame
+              src={siteImages.team}
+              alt={dict.home.showcase.caption}
+              caption={dict.home.showcase.caption}
+            />
           </Reveal>
         </div>
       </Section>

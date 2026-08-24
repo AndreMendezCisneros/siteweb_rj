@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { CtaBand } from "@/components/home/CtaBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { PeruMap } from "@/components/visuals/PeruMap";
+import { TechImageFrame } from "@/components/visuals/TechImageFrame";
 import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
@@ -44,19 +44,11 @@ export default async function ImpactoPage({ params }: Props) {
             </ul>
           </Reveal>
           <Reveal delay={120}>
-            <figure>
-              <div className="overflow-hidden rounded-[var(--radius-lg)] shadow-md">
-                <Image
-                  src={siteImages.ayacucho}
-                  alt={t.imageCaption}
-                  width={1024}
-                  height={768}
-                  className="h-auto w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <figcaption className="mt-3 text-xs text-muted">{t.imageCaption}</figcaption>
-            </figure>
+            <TechImageFrame
+              src={siteImages.ayacucho}
+              alt={t.imageCaption}
+              caption={t.imageCaption}
+            />
           </Reveal>
         </div>
       </Section>

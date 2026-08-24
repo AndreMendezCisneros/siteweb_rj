@@ -36,13 +36,7 @@ export function SectionHeading({
   return (
     <div className="max-w-3xl">
       {eyebrow ? (
-        <p
-          className={`mb-3 text-sm font-semibold uppercase tracking-[0.14em] ${
-            light ? "text-white/70" : "text-primary-hover"
-          }`}
-        >
-          {eyebrow}
-        </p>
+        <p className={`mb-3 ${light ? "tech-eyebrow-light" : "tech-eyebrow"}`}>{eyebrow}</p>
       ) : null}
       <h2
         className={`font-[family-name:var(--font-syne)] text-3xl font-semibold tracking-tight sm:text-4xl ${

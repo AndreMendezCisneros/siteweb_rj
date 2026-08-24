@@ -54,6 +54,9 @@ export const es = {
     brandService: "Servicio de la marca",
     viewMethodology: "Ver metodología",
     otherSolutions: "Otras soluciones",
+    visitSite: "Visitar sitio web",
+    clientWork: "Trabajo reciente",
+    openClientSite: "Ver sitio del cliente",
     conceptualView: "Vista conceptual",
     prev: "Anterior",
     next: "Siguiente",
@@ -168,6 +171,7 @@ export const es = {
         "Preparado para crecer con nuevos módulos cuando haga sentido",
       ],
       image: "/images/page_inicio.png",
+      siteUrl: "https://asiscole.com",
     },
     {
       slug: "asis-academy",
@@ -184,6 +188,15 @@ export const es = {
         "Escalable sin sobredimensionar lo que no se necesita hoy",
       ],
       image: "/images/page_portal_padres.png",
+      siteUrl: "https://asisacademy.com",
+    },
+  ],
+  webClients: [
+    {
+      name: "LCS — Luque Construcción y Servicios",
+      summary: "Sitio web corporativo para una empresa de construcción e infraestructura.",
+      url: "https://lcs.pe",
+      image: "/images/lcs_sitioweb.png",
     },
   ],
   services: [
@@ -246,6 +259,12 @@ export const es = {
     ],
   },
   home: {
+    heroTags: [
+      "Software a medida",
+      "Plataformas educativas",
+      "Integraciones API",
+      "Soporte continuo",
+    ],
     whatIs: {
       eyebrow: "Qué es RYJEC",
       title: "Tecnología útil para optimizar procesos y evolucionar",

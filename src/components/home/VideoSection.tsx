@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/Section";
+import { siteImages } from "@/lib/productScreenshots";
 
 // Cuando exista el video institucional real, colocar aquí la URL (mp4 o similar)
 const VIDEO_URL = "";
@@ -10,7 +11,7 @@ export function VideoSection({
   title,
   description,
   comingSoon,
-  poster = "/images/foto_ni_cl.png",
+  poster = siteImages.dashboard,
 }: {
   eyebrow: string;
   title: string;
@@ -22,7 +23,7 @@ export function VideoSection({
     <section className="py-10 sm:py-12 lg:py-14">
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} description={description} />
-        <div className="relative mt-8 overflow-hidden rounded-[var(--radius-lg)] shadow-md">
+        <div className="relative mt-8 overflow-hidden rounded-[var(--radius-lg)] border border-border bg-ink shadow-lg">
           {VIDEO_URL ? (
             <video
               controls
@@ -41,10 +42,10 @@ export function VideoSection({
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 72rem"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-ink/35">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-ink/55">
                 <span
                   aria-hidden
-                  className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/15 backdrop-blur-sm"
+                  className="flex h-16 w-16 items-center justify-center rounded-full border border-accent-glow/40 bg-accent-glow/10 backdrop-blur-sm"
                 >
                   <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 fill-white/80">
                     <path d="M8 5v14l11-7z" />

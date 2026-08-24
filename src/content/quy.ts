@@ -56,6 +56,9 @@ export const quy: Dict = {
     brandService: "Marcapa servicio",
     viewMethodology: "Metodologíata qaway",
     otherSolutions: "Huk soluciones",
+    visitSite: "Sitio webta watukuy",
+    clientWork: "Qayna llamkay",
+    openClientSite: "Cliente sitiota qhaway",
     conceptualView: "Yuyaynin vista",
     prev: "Ñawpaq",
     next: "Qatiq",
@@ -172,6 +175,7 @@ export const quy: Dict = {
         "Sentido kaptinqa musuq módulokunawan wiñananpaq listo",
       ],
       image: "/images/page_inicio.png",
+      siteUrl: "https://asiscole.com",
     },
     {
       slug: "asis-academy",
@@ -188,6 +192,15 @@ export const quy: Dict = {
         "Kunan mana necesitakuqta mana hatunyachispa escalable",
       ],
       image: "/images/page_portal_padres.png",
+      siteUrl: "https://asisacademy.com",
+    },
+  ],
+  webClients: [
+    {
+      name: "LCS — Luque Construcción y Servicios",
+      summary: "Construcción e infraestructura empresapaq corporativo sitio web.",
+      url: "https://lcs.pe",
+      image: "/images/lcs_sitioweb.png",
     },
   ],
   services: [
@@ -250,6 +263,12 @@ export const quy: Dict = {
     ],
   },
   home: {
+    heroTags: [
+      "Software a medida",
+      "Plataformas yachay",
+      "API integración",
+      "Soporte continuo",
+    ],
     whatIs: {
       eyebrow: "Imataq RYJEC",
       title: "Procesokunata allichananpaq wiñachinanpaq allin tecnología",

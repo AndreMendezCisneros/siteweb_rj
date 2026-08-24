@@ -24,6 +24,10 @@ type ButtonProps = {
   href?: string;
 } & Omit<ComponentProps<"button">, "className">;
 
+function isExternalHref(href: string) {
+  return /^https?:\/\//i.test(href);
+}
+
 export function Button({
   children,
   variant = "primary",
@@ -34,6 +38,19 @@ export function Button({
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (href) {
+    if (isExternalHref(href)) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}
