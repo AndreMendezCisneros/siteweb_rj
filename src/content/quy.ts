@@ -21,8 +21,8 @@ export const quy: Dict = {
       contact: "contacto@ryjec.com",
       support: "soporte@ryjec.com",
     },
-    phone: "+51 000 000 000",
-    whatsappDigits: "51000000000",
+    phone: "+51 949 261 503",
+    whatsappDigits: "51949261503",
   },
   cta: {
     primary: "Imataq allichayta necesitas willawayku",
@@ -171,7 +171,7 @@ export const quy: Dict = {
         "Educativo equipoq sapa p'unchaw llamkayninpaq diseñado",
         "Sentido kaptinqa musuq módulokunawan wiñananpaq listo",
       ],
-      image: "/images/product-asiscole.png",
+      image: "/images/page_inicio.png",
     },
     {
       slug: "asis-academy",
@@ -187,7 +187,7 @@ export const quy: Dict = {
         "Práctica utilidad seguimientoqpaq orientasqa",
         "Kunan mana necesitakuqta mana hatunyachispa escalable",
       ],
-      image: "/images/product-academy.png",
+      image: "/images/page_portal_padres.png",
     },
   ],
   services: [
@@ -261,7 +261,7 @@ export const quy: Dict = {
       title: "Desarrollamanta ñawpaqta jap'iq equipo",
       description:
         "Qamwan tiyayku, operaciónniykita jap'iku, contextoykiman cheqaq soluciónta diseñayku.",
-      caption: "RYJEC equipo — colaborativo llamkay",
+      caption: "RYJEC equipo — oficinapi colaborativo llamkay",
     },
     solutions: {
       eyebrow: "Soluciones",
@@ -379,7 +379,7 @@ export const quy: Dict = {
       ctaTitle: "¿Organizaciónniykipi huk procesota allichayta munanki?",
       ctaDescription:
         "Imataq allichayta necesitas willawayku. Contextoykita jap'iymanta qallarikusun.",
-      imageCaption: "Ayacucho, Perú — RYJEC paqarisqan",
+      imageCaption: "Ayacucho plaza — llaqtanchik",
     },
     soluciones: {
       metaTitle: "Soluciones",
@@ -399,7 +399,12 @@ export const quy: Dict = {
       emptyDescription:
         "Cheqaq documentasqa casokuna kaptinqa kaypim rakiniku. Chaykamaqa proyectoykimanta honestidadwan rimayta preferiku.",
       detailTitle: "RYJEC imaynataq aportan",
-      illustrationCaption: "Productopa yuyaynin ilustración — manam cheqaq capturaqa",
+      illustrationCaption: "Cheqaq sistema captura",
+      screenshotCaptions: {
+        dashboard: "Asistencia incidencias panel",
+        parentPortal: "Tayta-mama portal navegadorpi",
+        messagingApp: "Mensajería app móvil",
+      },
     },
     contacto: {
       metaTitle: "Rimanakuy",

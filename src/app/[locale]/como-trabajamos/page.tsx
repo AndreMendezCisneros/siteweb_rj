@@ -5,6 +5,7 @@ import { MethodSteps } from "@/components/home/MethodSteps";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -100,8 +101,8 @@ export default async function ComoTrabajamosPage({ params }: Props) {
             </div>
             <div className="relative min-h-[16rem]">
               <Image
-                src="/images/video-poster.png"
-                alt=""
+                src={siteImages.teamMember}
+                alt={dict.home.showcase.caption}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"

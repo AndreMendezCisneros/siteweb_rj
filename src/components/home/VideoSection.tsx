@@ -10,7 +10,7 @@ export function VideoSection({
   title,
   description,
   comingSoon,
-  poster = "/images/video-poster.png",
+  poster = "/images/foto_ni_cl.png",
 }: {
   eyebrow: string;
   title: string;

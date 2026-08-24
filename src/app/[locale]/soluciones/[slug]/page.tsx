@@ -6,7 +6,8 @@ import { CtaBand } from "@/components/home/CtaBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { ProductMock } from "@/components/visuals/ProductMock";
+import { ProductScreenshot } from "@/components/visuals/ProductScreenshot";
+import { getProductScreenshots } from "@/lib/productScreenshots";
 import { getDict, locales } from "@/lib/i18n";
 import { getAllSolutions, getSolution, getSolutionSlugs } from "@/lib/solutions";
 import { es } from "@/content/es";
@@ -32,11 +33,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function mockVariant(slug: string, kind: "product" | "service") {
-  if (slug === "asiscole") return "asiscole" as const;
-  if (slug === "asis-academy") return "academy" as const;
-  if (kind === "service") return "service" as const;
-  return "asiscole" as const;
+
+function secondaryCaption(
+  dict: ReturnType<typeof getDict>,
+  slug: string,
+  src: string,
+) {
+  const captions = dict.pages.soluciones.screenshotCaptions;
+  if (src.endsWith("app_asistencia.jpg")) return captions.messagingApp;
+  if (src.endsWith("page_portal_padres.png")) return captions.parentPortal;
+  if (slug === "asiscole") return captions.dashboard;
+  return captions.parentPortal;
 }
 
 export default async function SolutionPage({ params }: Props) {
@@ -50,6 +57,8 @@ export default async function SolutionPage({ params }: Props) {
   const related = getAllSolutions(dict)
     .filter((item) => item.slug !== solution.slug)
     .slice(0, 3);
+
+  const screenshots = getProductScreenshots(solution.slug);
 
   return (
     <>
@@ -107,12 +116,19 @@ export default async function SolutionPage({ params }: Props) {
               </figure>
             ) : null}
 
-            <div className="mt-8 max-w-xl">
-              <ProductMock
-                variant={mockVariant(solution.slug, solution.kind)}
-                caption={t.illustrationCaption}
-              />
-            </div>
+            {screenshots ? (
+              <div className="mt-8 max-w-xl">
+                <ProductScreenshot
+                  src={screenshots.secondary}
+                  alt={secondaryCaption(dict, solution.slug, screenshots.secondary)}
+                  caption={secondaryCaption(dict, solution.slug, screenshots.secondary)}
+                />
+              </div>
+            ) : (
+              <div className="mt-8 max-w-xl rounded-[var(--radius-lg)] border border-border bg-surface p-6 text-sm leading-relaxed text-muted">
+                {t.illustrationCaption}
+              </div>
+            )}
           </div>
 
           <aside className="h-fit rounded-[var(--radius-lg)] border border-border bg-surface p-6 lg:sticky lg:top-24">

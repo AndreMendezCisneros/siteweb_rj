@@ -19,8 +19,8 @@ export const es = {
       support: "soporte@ryjec.com",
     },
     // Reemplazar con el número real cuando esté disponible
-    phone: "+51 000 000 000",
-    whatsappDigits: "51000000000",
+    phone: "+51 949 261 503",
+    whatsappDigits: "51949261503",
   },
   cta: {
     primary: "Cuéntanos qué necesitas mejorar",
@@ -167,7 +167,7 @@ export const es = {
         "Diseñado para acompañar el trabajo diario del equipo educativo",
         "Preparado para crecer con nuevos módulos cuando haga sentido",
       ],
-      image: "/images/product-asiscole.png",
+      image: "/images/page_inicio.png",
     },
     {
       slug: "asis-academy",
@@ -183,7 +183,7 @@ export const es = {
         "Orientado a utilidad práctica y seguimiento",
         "Escalable sin sobredimensionar lo que no se necesita hoy",
       ],
-      image: "/images/product-academy.png",
+      image: "/images/page_portal_padres.png",
     },
   ],
   services: [
@@ -257,7 +257,7 @@ export const es = {
       title: "Un equipo que entiende antes de desarrollar",
       description:
         "Nos sentamos contigo, entendemos tu operación y diseñamos la solución que realmente tiene sentido para tu contexto.",
-      caption: "Equipo RYJEC — trabajo colaborativo",
+      caption: "Equipo RYJEC — trabajo colaborativo en oficina",
     },
     solutions: {
       eyebrow: "Soluciones",
@@ -374,7 +374,7 @@ export const es = {
         "Ayacucho es nuestra base. Los demás puntos representan la expansión que queremos construir con el tiempo, no presencia actual.",
       ctaTitle: "¿Quieres mejorar un proceso en tu organización?",
       ctaDescription: "Cuéntanos qué necesitas mejorar. Empecemos por entender tu contexto.",
-      imageCaption: "Ayacucho, Perú — donde nació RYJEC",
+      imageCaption: "Plaza de Ayacucho — nuestra ciudad",
     },
     soluciones: {
       metaTitle: "Soluciones",
@@ -394,7 +394,12 @@ export const es = {
       emptyDescription:
         "Cuando existan casos reales documentados, los compartiremos aquí. Mientras tanto, preferimos conversar sobre tu proyecto con honestidad.",
       detailTitle: "Cómo aporta RYJEC",
-      illustrationCaption: "Ilustración conceptual del producto — no es una captura real",
+      illustrationCaption: "Captura real del sistema",
+      screenshotCaptions: {
+        dashboard: "Panel de asistencia e incidencias",
+        parentPortal: "Portal familiar en el navegador",
+        messagingApp: "App móvil de mensajería",
+      },
     },
     contacto: {
       metaTitle: "Contacto",

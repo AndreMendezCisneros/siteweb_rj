@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SolutionIcon } from "@/components/visuals/Icons";
 import { PeruMap } from "@/components/visuals/PeruMap";
+import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
 export default async function HomePage({
@@ -37,7 +38,7 @@ export default async function HomePage({
       description: home.method.description,
       href: `/${locale}/como-trabajamos`,
       cta: dict.ui.viewMethodology,
-      image: "/images/showcase-team.png",
+      image: siteImages.team,
     },
     {
       eyebrow: home.map.eyebrow,
@@ -45,7 +46,7 @@ export default async function HomePage({
       description: home.map.description,
       href: `/${locale}/impacto`,
       cta: dict.ui.knowMore,
-      image: "/images/impacto-ayacucho.png",
+      image: siteImages.ayacucho,
     },
   ];
 
@@ -74,7 +75,7 @@ export default async function HomePage({
             </p>
           </Reveal>
           <ScrollShowcase
-            image="/images/showcase-team.png"
+            image={siteImages.team}
             alt={home.showcase.caption}
             caption={home.showcase.caption}
           />

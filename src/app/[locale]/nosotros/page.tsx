@@ -5,6 +5,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ValueIcon } from "@/components/visuals/Icons";
+import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -54,7 +55,7 @@ export default async function NosotrosPage({ params }: Props) {
               />
               <div className="relative overflow-hidden rounded-[var(--radius-lg)] shadow-md">
                 <Image
-                  src="/images/showcase-team.png"
+                  src={siteImages.team}
                   alt={dict.home.showcase.caption}
                   width={1024}
                   height={768}

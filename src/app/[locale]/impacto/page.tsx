@@ -5,6 +5,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { PeruMap } from "@/components/visuals/PeruMap";
+import { siteImages } from "@/lib/productScreenshots";
 import { getDict } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -46,7 +47,7 @@ export default async function ImpactoPage({ params }: Props) {
             <figure>
               <div className="overflow-hidden rounded-[var(--radius-lg)] shadow-md">
                 <Image
-                  src="/images/impacto-ayacucho.png"
+                  src={siteImages.ayacucho}
                   alt={t.imageCaption}
                   width={1024}
                   height={768}
