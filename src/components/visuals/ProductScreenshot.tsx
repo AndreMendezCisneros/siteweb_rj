@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+function isPhoneScreenshot(src: string) {
+  return src.includes("app_asistencia") || src.includes("page_portal_padres");
+}
+
 export function ProductScreenshot({
   src,
   alt,
@@ -20,13 +24,17 @@ export function ProductScreenshot({
   priority?: boolean;
 }) {
   const isHero = variant === "hero";
-  const isPhone = device === "phone" || src.includes("app_asistencia");
+  const isPhone = device === "phone" || (device !== "browser" && isPhoneScreenshot(src));
 
   if (isPhone) {
     return (
-      <figure className={`relative mx-auto w-full max-w-[13.5rem] sm:max-w-[15rem] ${className}`}>
-        <div className="overflow-hidden rounded-[1.65rem] border border-border bg-ink p-[0.45rem] shadow-md">
-          <div className="overflow-hidden rounded-[1.25rem] bg-surface">
+      <figure className={`relative mx-auto w-full max-w-[12.5rem] sm:max-w-[14rem] ${className}`}>
+        <div className="overflow-hidden rounded-[1.75rem] border border-border bg-ink p-[0.4rem] shadow-md ring-1 ring-black/5">
+          <div className="relative overflow-hidden rounded-[1.35rem] bg-surface">
+            <span
+              className="absolute left-1/2 top-1.5 z-10 h-1 w-10 -translate-x-1/2 rounded-full bg-ink/15"
+              aria-hidden
+            />
             <Image
               src={src}
               alt={alt}
@@ -34,7 +42,7 @@ export function ProductScreenshot({
               height={844}
               priority={priority}
               className="h-auto w-full object-cover object-top"
-              sizes="(max-width: 640px) 216px, 240px"
+              sizes="(max-width: 640px) 200px, 224px"
             />
           </div>
         </div>
@@ -105,3 +113,5 @@ export function ProductScreenshot({
     </figure>
   );
 }
+
+export { isPhoneScreenshot };

@@ -416,7 +416,7 @@ export const es = {
       illustrationCaption: "Captura real del sistema",
       screenshotCaptions: {
         dashboard: "Panel de asistencia e incidencias",
-        parentPortal: "Portal familiar en el navegador",
+        parentPortal: "Portal familiar",
         messagingApp: "App móvil de mensajería",
       },
     },

@@ -421,7 +421,7 @@ export const quy: Dict = {
       illustrationCaption: "Cheqaq sistema captura",
       screenshotCaptions: {
         dashboard: "Asistencia incidencias panel",
-        parentPortal: "Tayta-mama portal navegadorpi",
+        parentPortal: "Tayta-mama portal",
         messagingApp: "Mensajería app móvil",
       },
     },

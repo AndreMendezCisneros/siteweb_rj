@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/home/CtaBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { ProductScreenshot } from "@/components/visuals/ProductScreenshot";
+import { ProductScreenshot, isPhoneScreenshot } from "@/components/visuals/ProductScreenshot";
 import { getProductScreenshots } from "@/lib/productScreenshots";
 import { getDict, locales } from "@/lib/i18n";
 import { getAllSolutions, getSolution, getSolutionSlugs } from "@/lib/solutions";
@@ -99,39 +98,54 @@ export default async function SolutionPage({ params }: Props) {
             )}
 
             {solution.kind === "product" && solution.image ? (
-              <figure className="mt-8 max-w-xl">
-                <div className="overflow-hidden rounded-[var(--radius-lg)] shadow-md">
-                  <Image
+              isPhoneScreenshot(solution.image) && screenshots?.secondary ? (
+                <div className="mt-8 flex flex-wrap items-start justify-center gap-5 sm:justify-start sm:gap-6">
+                  <ProductScreenshot
                     src={solution.image}
-                    alt={solution.name}
-                    width={1024}
-                    height={768}
-                    className="h-auto w-full object-cover"
-                    sizes="(max-width: 1024px) 100vw, 36rem"
+                    alt={secondaryCaption(dict, solution.slug, solution.image)}
+                    caption={secondaryCaption(dict, solution.slug, solution.image)}
+                    url={
+                      solution.slug === "asis-academy"
+                        ? "portal.asisacademy.com"
+                        : "panel.asiscole.com"
+                    }
+                  />
+                  <ProductScreenshot
+                    src={screenshots.secondary}
+                    alt={secondaryCaption(dict, solution.slug, screenshots.secondary)}
+                    caption={secondaryCaption(dict, solution.slug, screenshots.secondary)}
                   />
                 </div>
-                <figcaption className="mt-3 text-xs text-muted">
-                  {solution.audience} — {solution.name}
-                </figcaption>
-              </figure>
+              ) : (
+                <div className="mt-8 max-w-xl">
+                  <ProductScreenshot
+                    src={solution.image}
+                    alt={`${solution.audience} — ${solution.name}`}
+                    caption={`${solution.audience} — ${solution.name}`}
+                    url={
+                      solution.slug === "asiscole"
+                        ? "panel.asiscole.com"
+                        : "portal.asisacademy.com"
+                    }
+                  />
+                </div>
+              )
             ) : null}
 
-            {screenshots ? (
+            {screenshots &&
+            !(solution.kind === "product" && solution.image && isPhoneScreenshot(solution.image)) ? (
               <div className="mt-8">
                 <ProductScreenshot
                   src={screenshots.secondary}
                   alt={secondaryCaption(dict, solution.slug, screenshots.secondary)}
                   caption={secondaryCaption(dict, solution.slug, screenshots.secondary)}
-                  device={
-                    screenshots.secondary.includes("app_asistencia") ? "phone" : "browser"
-                  }
                 />
               </div>
-            ) : (
+            ) : !screenshots && !(solution.kind === "product" && solution.image) ? (
               <div className="mt-8 max-w-xl rounded-[var(--radius-lg)] border border-border bg-surface p-6 text-sm leading-relaxed text-muted">
                 {t.illustrationCaption}
               </div>
-            )}
+            ) : null}
           </div>
 
           <aside className="h-fit rounded-[var(--radius-lg)] border border-border bg-surface p-6 lg:sticky lg:top-24">

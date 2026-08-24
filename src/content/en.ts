@@ -417,7 +417,7 @@ export const en: Dict = {
       illustrationCaption: "Real system screenshot",
       screenshotCaptions: {
         dashboard: "Attendance and incidents dashboard",
-        parentPortal: "Family portal in the browser",
+        parentPortal: "Family portal",
         messagingApp: "Mobile messaging app",
       },
     },
