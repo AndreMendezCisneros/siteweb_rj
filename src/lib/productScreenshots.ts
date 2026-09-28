@@ -1,5 +1,5 @@
 export const siteImages = {
-  team: "/images/foto_ni_cl.png",
+  team: "/images/equipo.jpg",
   teamMember: "/images/foto_je.png",
   ayacucho: "/images/foto_pl.jpg",
   dashboard: "/images/page_inicio.png",

@@ -109,6 +109,13 @@ export function Footer({ locale, dict }: { locale: string; dict: Dict }) {
                   {site.phone}
                 </a>
               </li>
+              {site.phones.map((phone) => (
+                <li key={phone}>
+                  <a href={`tel:${phone.replace(/\s/g, "")}`} className="transition hover:text-white">
+                    {phone}
+                  </a>
+                </li>
+              ))}
               <li>{footer.location}</li>
             </ul>
             <div className="mt-6 flex flex-col gap-2 text-sm">

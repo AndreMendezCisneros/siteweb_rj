@@ -210,7 +210,9 @@ export default async function HomePage({
                 zoomOut: dict.map.zoomOut,
                 reset: dict.map.reset,
                 legendHq: dict.map.legendHq,
+                legendRegion: dict.map.legendRegion,
                 legendFuture: dict.map.legendFuture,
+                ocean: dict.map.ocean,
               }}
             />
           </Reveal>

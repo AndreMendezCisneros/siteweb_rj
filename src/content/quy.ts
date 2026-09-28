@@ -22,6 +22,7 @@ export const quy: Dict = {
       support: "soporte@ryjec.com",
     },
     phone: "+51 949 261 503",
+    phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
   },
   cta: {
@@ -280,7 +281,7 @@ export const quy: Dict = {
       title: "Desarrollamanta ñawpaqta jap'iq equipo",
       description:
         "Qamwan tiyayku, operaciónniykita jap'iku, contextoykiman cheqaq soluciónta diseñayku.",
-      caption: "RYJEC equipo — oficinapi colaborativo llamkay",
+      caption: "RYJEC equipo",
     },
     solutions: {
       eyebrow: "Soluciones",
@@ -554,7 +555,9 @@ export const quy: Dict = {
     reset: "Qawanata kutichiy",
     dragHint: "Mapata kuyuchinapaq aysay",
     legendHq: "RYJEC base",
+    legendRegion: "Ayacucho suyu",
     legendFuture: "Hamuq expansión (aspiración)",
+    ocean: "Pacífico mama qucha",
     points: [
       {
         id: "ayacucho",

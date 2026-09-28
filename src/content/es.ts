@@ -20,6 +20,7 @@ export const es = {
     },
     // Reemplazar con el número real cuando esté disponible
     phone: "+51 949 261 503",
+    phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
   },
   cta: {
@@ -276,7 +277,7 @@ export const es = {
       title: "Un equipo que entiende antes de desarrollar",
       description:
         "Nos sentamos contigo, entendemos tu operación y diseñamos la solución que realmente tiene sentido para tu contexto.",
-      caption: "Equipo RYJEC — trabajo colaborativo en oficina",
+      caption: "Equipo RYJEC",
     },
     solutions: {
       eyebrow: "Soluciones",
@@ -549,7 +550,9 @@ export const es = {
     reset: "Restablecer vista",
     dragHint: "Arrastra para mover el mapa",
     legendHq: "Base RYJEC",
+    legendRegion: "Región Ayacucho",
     legendFuture: "Expansión futura (aspiración)",
+    ocean: "Océano Pacífico",
     points: [
       {
         id: "ayacucho",

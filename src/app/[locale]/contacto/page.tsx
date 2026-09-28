@@ -75,6 +75,18 @@ export default async function ContactoPage({ params }: Props) {
                   >
                     {site.phone}
                   </a>
+                  <ul className="mt-2 space-y-1">
+                    {site.phones.map((phone) => (
+                      <li key={phone}>
+                        <a
+                          href={`tel:${phone.replace(/\s/g, "")}`}
+                          className="font-medium text-ink underline-offset-2 hover:text-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        >
+                          {phone}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
                 <li>
                   <span className="block text-xs font-semibold uppercase tracking-[0.12em] text-primary-hover">

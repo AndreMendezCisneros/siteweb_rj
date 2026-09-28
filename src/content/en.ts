@@ -21,6 +21,7 @@ export const en: Dict = {
       support: "soporte@ryjec.com",
     },
     phone: "+51 949 261 503",
+    phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
   },
   cta: {
@@ -277,7 +278,7 @@ export const en: Dict = {
       title: "A team that understands before building",
       description:
         "We sit down with you, understand your operation and design the solution that truly makes sense for your context.",
-      caption: "RYJEC team — collaborative work in the office",
+      caption: "RYJEC team",
     },
     solutions: {
       eyebrow: "Solutions",
@@ -550,7 +551,9 @@ export const en: Dict = {
     reset: "Reset view",
     dragHint: "Drag to move the map",
     legendHq: "RYJEC base",
+    legendRegion: "Ayacucho region",
     legendFuture: "Future expansion (aspiration)",
+    ocean: "Pacific Ocean",
     points: [
       {
         id: "ayacucho",
