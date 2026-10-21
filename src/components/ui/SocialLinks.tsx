@@ -4,22 +4,50 @@ type Social = {
   href: string;
 };
 
-function SocialIcon({ id }: { id: string }) {
+export function SocialIcon({ id, className = "h-4 w-4" }: { id: string; className?: string }) {
   if (id === "facebook") {
     return (
-      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+      <svg viewBox="0 0 24 24" className={`${className} fill-current`} aria-hidden>
         <path d="M14 8.5h2.2V5.8H14c-2 0-3.3 1.2-3.3 3.4v1.5H8.5v2.7h2.2V20h2.8v-6.6H16l.5-2.7h-2.7V9.3c0-.5.2-.8.7-.8Z" />
       </svg>
     );
   }
   if (id === "tiktok") {
     return (
-      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+      <svg viewBox="0 0 24 24" className={`${className} fill-current`} aria-hidden>
         <path d="M16.4 4c.5 1.7 1.7 3.1 3.4 3.7v2.5a6.6 6.6 0 0 1-3.4-1v5.5a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.7a2.9 2.9 0 1 0 2 2.8V4h2.7Z" />
       </svg>
     );
   }
   return null;
+}
+
+export function SocialNavIcons({
+  socials,
+  className = "",
+}: {
+  socials: readonly Social[];
+  className?: string;
+}) {
+  if (!socials.length) return null;
+
+  return (
+    <div className={`flex items-center gap-1.5 ${className}`}>
+      {socials.map((social) => (
+        <a
+          key={social.id}
+          href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={social.label}
+          title={social.label}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] border border-border text-ink transition hover:border-primary hover:bg-primary-soft hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          <SocialIcon id={social.id} className="h-5 w-5" />
+        </a>
+      ))}
+    </div>
+  );
 }
 
 export function SocialLinks({
