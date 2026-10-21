@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import type { Dict } from "@/lib/i18n";
 
 export function Footer({ locale, dict }: { locale: string; dict: Dict }) {
@@ -118,6 +119,13 @@ export function Footer({ locale, dict }: { locale: string; dict: Dict }) {
               ))}
               <li>{footer.location}</li>
             </ul>
+            <div className="mt-6">
+              <SocialLinks
+                socials={site.socials}
+                title={footer.socialsTitle}
+                tone="dark"
+              />
+            </div>
             <div className="mt-6 flex flex-col gap-2 text-sm">
               <Link href={localized("/legal/privacidad")} className="text-white/65 hover:text-white">
                 {footer.privacy}

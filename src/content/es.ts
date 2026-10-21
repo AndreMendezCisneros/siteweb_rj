@@ -22,6 +22,13 @@ export const es = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "facebook",
+        label: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61593156238212",
+      },
+    ],
   },
   cta: {
     primary: "Cuéntanos qué necesitas mejorar",
@@ -452,6 +459,7 @@ export const es = {
       phoneTitle: "Teléfono y WhatsApp",
       phoneCall: "Llamar",
       whatsappLabel: "Escribir por WhatsApp",
+      socialsTitle: "Redes sociales",
       whereTitle: "Dónde estamos",
       whereText:
         "Ayacucho, Perú. Trabajamos con organizaciones locales y estamos construyendo alcance hacia otras regiones.",
@@ -538,6 +546,7 @@ export const es = {
     productsTitle: "Productos",
     servicesTitle: "Servicios",
     contactTitle: "Contacto",
+    socialsTitle: "Redes sociales",
     seeAll: "Ver todas las soluciones",
     privacy: "Política de privacidad",
     cookies: "Política de cookies",

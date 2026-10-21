@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contacto/ContactForm";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { getDict } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -103,6 +104,8 @@ export default async function ContactoPage({ params }: Props) {
                 </li>
               </ul>
             </div>
+
+            <SocialLinks socials={site.socials} title={t.socialsTitle} />
 
             <div>
               <h2 className="font-[family-name:var(--font-syne)] text-xl font-semibold text-ink">

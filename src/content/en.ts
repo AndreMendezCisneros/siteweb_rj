@@ -23,6 +23,13 @@ export const en: Dict = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "facebook",
+        label: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61593156238212",
+      },
+    ],
   },
   cta: {
     primary: "Tell us what you need to improve",
@@ -453,6 +460,7 @@ export const en: Dict = {
       phoneTitle: "Phone and WhatsApp",
       phoneCall: "Call",
       whatsappLabel: "Write on WhatsApp",
+      socialsTitle: "Social media",
       whereTitle: "Where we are",
       whereText:
         "Ayacucho, Peru. We work with local organizations and are building reach into other regions.",
@@ -539,6 +547,7 @@ export const en: Dict = {
     productsTitle: "Products",
     servicesTitle: "Services",
     contactTitle: "Contact",
+    socialsTitle: "Social media",
     seeAll: "See all solutions",
     privacy: "Privacy policy",
     cookies: "Cookie policy",

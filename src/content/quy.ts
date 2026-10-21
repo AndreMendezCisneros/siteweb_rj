@@ -24,6 +24,13 @@ export const quy: Dict = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "facebook",
+        label: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61593156238212",
+      },
+    ],
   },
   cta: {
     primary: "Imataq allichayta necesitas willawayku",
@@ -457,6 +464,7 @@ export const quy: Dict = {
       phoneTitle: "Teléfono wan WhatsApp",
       phoneCall: "Waay",
       whatsappLabel: "WhatsAppwan qillqay",
+      socialsTitle: "Social redes",
       whereTitle: "Maypim kayku",
       whereText:
         "Ayacucho, Perú. Local organizaciónkunawan llamkaniku, huk regionkunaman alcance ruwaytachkayku.",
@@ -543,6 +551,7 @@ export const quy: Dict = {
     productsTitle: "Productos",
     servicesTitle: "Servicios",
     contactTitle: "Rimanakuy",
+    socialsTitle: "Social redes",
     seeAll: "Tukuy solucionesta qaway",
     privacy: "Privacidad política",
     cookies: "Cookies política",
